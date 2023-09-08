@@ -1,0 +1,107 @@
+.main {
+    width: 50%;
+    margin: auto;
+}
+
+.main img {
+    width: 100%;
+    margin: auto;
+}
+
+.detail {
+    padding-top: 5%;
+}
+
+.name {
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.description {
+    margin-bottom: 5%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: solid 1px #EBEBEB;
+    padding: 0;
+    margin-bottom: 5%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+th {
+    border: solid 1px #EBEBEB;
+    background-color: #A4907C;
+    color: #ffffff;
+    text-align: left;
+    padding: 2%;
+    width: 20%;
+}
+
+td {
+    border: solid 1px #EBEBEB;
+    padding: 2%;
+    width: 70%;
+}
+
+td span {
+    font-weight: bold;
+    color: #A4907C;
+}
+
+iframe {
+    width: 100%;
+}
+
+/*========= レスポンシブデザイン =========*/
+/*　画面サイズが480pxからはここを読み込む　*/
+@media screen and (max-width:480px) {
+    .main {
+        width: 100%;
+    }
+
+    .detail {
+        padding-top: 8%;
+    }
+
+    .name {
+        margin-bottom: 8%;
+    }
+
+    .description {
+        margin-bottom: 8%;
+    }
+
+    table {
+        padding: 0;
+        margin-bottom: 10%;
+    }
+
+    th {
+        padding: 2%;
+        width: 35%;
+    }
+
+    td {
+        padding: 2%;
+        width: 65%;
+    }
+}
+
+
+/*========= アニメーション用 =========*/
+.fead-in {
+    /* 最初は非表示 */
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 1s, opacity 1s, visibility 1s;
+}
+
+.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
