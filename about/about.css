@@ -1,8 +1,63 @@
-/* /aboutだけで使うcss */
-body {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
-    color: white;
-    background-color: blue;
+/*========= aboutだけで使うcss =========*/
+.main {
+  padding-top: 4%;
+  width: 90%;
+  margin-left: auto;
+}
+
+.box {
+  padding: 4% 1%;
+  border-top: solid 1px #EBEBEB;
+}
+
+.box:last-child {
+  border-bottom: solid 1px #EBEBEB;
+}
+
+.headline {
+  color: #A4907C;
+  letter-spacing: 0.1em;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.area {
+  padding: 3% 1% 0 1%;
+}
+
+.detail {
+  padding-top: 1%;
+}
+
+
+/*========= レスポンシブデザイン =========*/
+/*　画面サイズが480pxからはここを読み込む　*/
+@media screen and (max-width:480px) {
+  .main {
+      padding-top: 10%;
+      width: 95%;
   }
+
+  .box {
+      padding: 10% 3%;
+  }
+
+  .headline {
+      letter-spacing: 0.1em;
+      font-size: 16px;
+  }
+
+  .area {
+      padding: 5% 2% 0 2%;
+  }
+
+  .detail {
+      padding-top: 2%;
+  }
+}
+
+
+/*========= アニメーション用 =========*/
+.randomAnime {
+  visibility: hidden;
+}

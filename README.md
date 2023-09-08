@@ -3,7 +3,7 @@
 
 # ページの構成
 home  
-profile  
+about  
 food  
 cat  
 contact  
