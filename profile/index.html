@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../home/home.css">
+    <link rel="stylesheet" href="../profile/profile.css">
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
 </head>
 
 <body>
@@ -30,20 +31,28 @@
 
     <div class="container">
         <span class="slide-in left-anime">
-            <span class="title slide-in-inner left-animeInner">HOME</span>
+            <span class="title slide-in-inner left-animeInner">PROFILE</span>
         </span>
         <div class="main">
-            <div class="link">
-                <a href="../profile/index.html" class="fade-in">PROFILE</a>
+            <div class="box">
+                <h2 class="headline randomAnime">ABOUT US</h2>
+                <div class="area">
+                    <p>
+                        氏名：重森星児<br>
+                        居住地：京都府<br>
+                        生年月日：2004年7月17日
+                    </p>
+                </div>
             </div>
-            <div class="link">
-                <a href="../food/index.html" class="fade-in">FOOD</a>
-            </div>
-            <div class="link">
-                <a href="../cat/index.html" class="fade-in">CAT</a>
-            </div>
-            <div class="link">
-                <a href="../contact/index.html" class="fade-in">CONTACT</a>
+            <div class="box">
+                <h2 class="headline randomAnime">FAVORITE</h2>
+                <div class="area">
+                    <h3 class="theme">ゲーム</h3>
+                    <p class="detail">
+                        varolantのようなFPSからゼルダの伝説のようなRPGまでいろいろな種類のゲームをしています。<br>
+                        人生ゲームなどのボードゲームやパーティゲームも好きです。
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -60,8 +69,11 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script
+        src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-8/js/jquery.lettering.js"></script>
     <script src="../js/script.js"></script>
-    <script src="../home/home.js"></script>
+    <script src="../profile/profile.js"></script>
 </body>
 
 </html>

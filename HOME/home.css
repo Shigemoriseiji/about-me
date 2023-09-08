@@ -1,0 +1,66 @@
+/*========= homeだけで使うcss =========*/
+.main {
+    padding-top: 4%;
+    width: 90%;
+    margin-left: auto;
+}
+
+/* 真ん中のリンク */
+.link {
+    padding: 4% 1%;
+    border-top: solid 1px #EBEBEB;
+}
+
+.link:last-child {
+    border-bottom: solid 1px #EBEBEB;
+}
+
+.link a {
+    display: inline-block;
+    background-color: #A4907C;
+    padding: 0.8% 5%;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.link a:hover {
+    background-color: #8D7B68;
+}
+
+
+/*========= レスポンシブデザイン =========*/
+/*　画面サイズが480pxからはここを読み込む　*/
+@media screen and (max-width:480px) {
+    .main {
+        padding-top: 10%;
+        width: 95%;
+    }
+
+    /* 真ん中のリンク */
+    .link {
+        padding: 10% 3%;
+    }
+
+    .link a {
+        padding: 2% 8%;
+        letter-spacing: 0.1em;
+        font-size: 16px;
+    }
+}
+
+
+/*========= アニメーション用 =========*/
+.fade-in {
+    opacity: 0;
+    transition: all 1s;
+    transform: translate(-100px, 0);
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}

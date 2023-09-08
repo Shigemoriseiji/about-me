@@ -1,0 +1,155 @@
+/*========= foodだけで使うcss =========*/
+.text {
+    margin: 2% 0 5% 0;
+    color: #8D7B68;
+    font-size: 24px;
+    font-weight: normal;
+    position: relative;
+    padding-bottom: 0.8em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.text:before {
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 4px;
+    content: '';
+    border-radius: 4px;
+    background: #8D7B68;
+}
+
+
+.box-item {
+    padding-bottom: 50px;
+    border: solid 3px #EBEBEB;
+    border-radius: 15px;
+    overflow: hidden;
+    color: #000;
+}
+
+.box-item img {
+    width: 99.6%;
+    margin: auto;
+}
+
+.detail {
+    padding: 6%;
+}
+
+.name {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+
+/*========= レスポンシブデザイン =========*/
+/*　画面サイズが480pxからはここを読み込む　*/
+@media screen and (max-width:480px) {
+    .text {
+        margin: 6% 0 13% 0;
+        font-size: 16px;
+        padding-bottom: 0.5em;
+    }
+
+    .text:before {
+        left: calc(50% - 15px);
+        width: 30px;
+        height: 2px;
+        border-radius: 2px;
+    }
+
+    .box-list {
+        flex-wrap: wrap;
+    }
+
+    .box-item .name {
+        margin: 10px 0 5px 0;
+    }
+    ul {
+        padding: 0;
+    }
+}
+
+
+/*========= アニメーション用 =========*/
+.slider {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+.slider .slick-slide {
+    margin: 0 10px;
+}
+
+.slider .slick-slide a {
+    display: block;
+    width: 80%;
+    margin: auto;
+    text-decoration: none;
+}
+
+
+/*矢印の設定*/
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+    position: absolute;
+    /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    border-top: 4px solid #8D7B68;
+    /*矢印の色*/
+    border-right: 4px solid #8D7B68;
+    /*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+/*戻る矢印の位置と形状*/
+.slick-prev {
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+/*次へ矢印の位置と形状*/
+.slick-next {
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+.slick-dots {
+    text-align: center;
+    margin: 40px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px;
+    /*ドットボタンのサイズ*/
+    height: 8px;
+    /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: #ccc;
+    /*ドットボタンの色*/
+}
+
+/*ドットボタンの現在地表示の色*/
+.slick-dots .slick-active button {
+    background: #8D7B68;
+}

@@ -1,0 +1,167 @@
+/*サイト全体に適用するCSS*/
+
+/* containerを画面サイズに合わせる */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F2EA47;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ヘッダー */
+.header {
+    text-align: right;
+    padding: 20px 40px;
+}
+
+.header .menu {
+    display: inline-block;
+}
+
+.header .menu a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #A4907C;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header .menu a:hover {
+    color: #8D7B68;
+}
+
+/* メイン */
+.container {
+    width: 90%;
+    padding: 4% 5%;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-top: 2%;
+    flex: 1;
+}
+
+.title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 60px;
+    color: #8D7B68;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+/* フッター */
+.fotter {
+    background-color: #FAF4EE;
+    padding: 2%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.fotter .menu {
+    display: inline-block;
+    text-align: left;
+}
+
+.fotter .menu a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 5px;
+    color: #A4907C;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.fotter .menu a:hover {
+    color: #8D7B68;
+}
+
+/*========= 流れるテキスト =========*/
+.slide-in {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in-inner {
+    display: inline-block;
+
+}
+
+.left-anime {
+    /*事前に透過0にして消しておく*/
+    opacity: 0;
+}
+
+.slideAnimeLeftRight {
+    animation-name: slideTextX100;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX100 {
+    from {
+        transform: translateX(-100%);
+        /*要素を左の枠外に移動*/
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        /*要素を元の位置に移動*/
+        opacity: 1;
+    }
+}
+
+.slide-anime-right-left {
+    animation-name: slideTextX-100;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+@keyframes slideTextX-100 {
+    from {
+        transform: translateX(100%);
+        /*要素を右の枠外に移動*/
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        /*要素を元の位置に移動*/
+        opacity: 1;
+    }
+}
+
+
+/* レスポンシブデザイン */
+/*　画面サイズが480pxからはここを読み込む　*/
+@media screen and (max-width:480px) {
+    body {
+        font-size: 14px;
+
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 7% 5% 15% 5%;
+        background-color: #ffffff;
+        margin-left: auto;
+        margin-top: 0;
+        flex: 1;
+    }
+
+    .header {
+        text-align: right;
+        padding: 20px;
+    }
+
+    .header .menu a,
+    .fotter .menu a {
+        padding: 5px;
+    }
+}
